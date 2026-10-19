@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>tinker</title>
+<meta name="description" content="본문의 링크를 누르면 등장인물의 휴대폰을 열어볼 수 있는 페이지">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="story" class="story" hidden></main>
+
+  <div id="phoneLayer" class="phone-layer">
+    <div class="backdrop" data-close></div>
+    <div class="device">
+      <div class="bezel-top"><i class="sensor"></i><i class="speaker"></i><i class="fcam"></i></div>
+      <div id="screen" class="screen">
+        <div class="sbar">
+          <span class="sb-left" id="sbLeft"></span>
+          <span class="sb-ticker" id="ticker" hidden></span>
+          <span class="sb-right">
+            <svg class="sig" viewBox="0 0 17 13" aria-hidden="true"><rect x="0" y="9" width="3" height="4"/><rect x="4.5" y="6.5" width="3" height="6.5"/><rect x="9" y="3.5" width="3" height="9.5"/><rect x="13.5" y="0" width="3" height="13"/></svg>
+            <b class="net" id="sbNet"></b>
+            <span class="bat"><i id="batFill"></i></span>
+            <span id="batPct"></span>
+            <span id="sbTime"></span>
+          </span>
+        </div>
+        <div id="screens" class="screens"></div>
+        <div id="optMenu" class="opt-menu" hidden></div>
+        <div id="toast" class="toast" hidden></div>
+      </div>
+      <div class="keys">
+        <button class="hk" data-key="menu" aria-label="메뉴"><svg viewBox="0 0 26 18"><rect x="2" y="2" width="22" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 7h12M7 11h12" stroke="currentColor" stroke-width="1.4"/></svg></button>
+        <button class="hk home" data-key="home" aria-label="홈"><i></i></button>
+        <button class="hk" data-key="back" aria-label="뒤로"><svg viewBox="0 0 26 18"><path d="M9 3L4 7.5 9 12M4 7.5h12a5 4.5 0 0 1 0 9h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <button class="close-phone" data-close aria-label="휴대폰 닫기">✕</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
